@@ -1,0 +1,2 @@
+samtools mpileup -f /hackathon/Hackathon_Project_4/REFERENCE_GENOME/hg19.fa /hackathon/Hackathon_Project_4/ENCODE_DATA_GM12878/COMPLETED/ENCFF000ARG.bam -r chr22 > /hackathon/Hackathon_Project_4/MPILEUP/ENCFF000ARG.mpileup
+samtools mpileup -f /hackathon/Hackathon_Project_4/REFERENCE_GENOME/hg19.fa /hackathon/Hackathon_Project_4/ENCODE_DATA_GM12878/COMPLETED/ENCFF000ARI.bam -r chr22 > /hackathon/Hackathon_Project_4/MPILEUP/ENCFF000ARI.mpileup
