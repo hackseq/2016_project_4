@@ -15,5 +15,7 @@ def coverage():
     return render_template('coverage.html',
                            title='Summary of Coverage')
 
-
+@webapp.route('/about')
+def about():
+    return render_template('about.html', title='About the Team')
 
