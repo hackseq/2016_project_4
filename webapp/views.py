@@ -1,21 +1,21 @@
 from flask import render_template, send_from_directory
 from flask_cors import CORS, cross_origin
-from app import app
+from webapp import webapp
 
-cors = CORS(app, resources={r"/*": {"origins": "*"}})
+cors = CORS(webapp, resources={r"/*": {"origins": "*"}})
 
-@app.route('/')
-@app.route('/index')
+@webapp.route('/')
+@webapp.route('/index')
 def index():
     return "Hello World!"
 
-@app.route('/coverage')
+@webapp.route('/coverage')
 def coverage():
     return render_template('coverage.html',
                            title='Summary of Coverage')
 
-@app.route('/<path:path>')
-@cross_origin(headers='Range')
+@webapp.route('/<path:path>')
+@cross_origin(expose_headers='Range')
 def send_file(path):
     return send_from_directory('static/bam', path)
 
