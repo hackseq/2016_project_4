@@ -21,7 +21,7 @@
                 ucscName: 'hg19'
             },
 
-     sources:     [{name:                 'Genome',
+        sources: [{name:                 'Genome',
                    twoBitURI:            '//www.biodalliance.org/datasets/hg19.2bit',
                    tier_type:            'sequence'},
                   {name: "Coo",
@@ -31,14 +31,15 @@
                   {name: "Variants",
                    bwgURI: 'static/GIAB-V3.3-chr22.web.bb',
                    style: [{type: 'default', style: {LABEL: false, GLYPH: 'PLIMSOLL'}}]
-}]
+    }]
   });
 
         function export_region() {
             var chr = browser.chr;
             var viewStart = browser.viewStart;
             var viewEnd = browser.viewEnd;
-            var data = {'chr': chr, 'viewStart': viewStart, 'viewEnd': viewEnd};
+            var sources = browser.sources;
+            var data = {'chr': chr, 'viewStart': viewStart, 'viewEnd': viewEnd, 'sources': sources };
             $.ajax({
                 url: '/get_region',
                 data: JSON.stringify(data),
