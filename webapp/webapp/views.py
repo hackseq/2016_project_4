@@ -19,3 +19,6 @@ def coverage():
 def about():
     return render_template('about.html', title='About the Team')
 
+@webapp.route('/data')
+def data():
+    return render_template('data.html', title='Data Provenance')
