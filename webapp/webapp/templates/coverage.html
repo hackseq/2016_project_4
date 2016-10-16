@@ -23,8 +23,10 @@
                    twoBitURI:            '//www.biodalliance.org/datasets/hg19.2bit',
                    tier_type:            'sequence'},
                   {name: "MyBAMTrack",
-                   bamURI: '{{ url_for('static', filename='bam/bodymap-skeletal_muscle-chr22.bam') }}'}]
-    });
+                   bamURI: '{{ url_for('static', filename='bam/bodymap-skeletal_muscle-chr22.bam') }}'},
+                  {name: "MyBAMTrack",
+                   bamURI: 'http://www.biodalliance.org/datasets/bodymap-skeletal_muscle-chr22.bam'}]
+  });
 </script>
 
 <div id="svgHolder"></div>
