@@ -2,33 +2,62 @@
 {% extends "base.html" %}
 
 {% block content %}
-<script language="javascript" src="//www.biodalliance.org/release-0.13/dalliance-compiled.js"></script>
-<script language="javascript">
-  new Browser({
-    chr:          '22',
-    viewStart:    30700000,
-    viewEnd:      30900000,
 
-    coordSystem: {
-      speciesName: 'Human',
-      taxon: 9606,
-      auth: 'GRCh',
-      version: '37',
-      ucscName: 'hg19'
-    },
+    <script type=text/javascript>
+        $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    </script>
+    <script language="javascript" src="//www.biodalliance.org/release-0.13/dalliance-compiled.js"></script>
+    <script language="javascript">
+        browser = new Browser({
+            chr: '22',
+            viewStart: 30700000,
+            viewEnd: 30900000,
 
-    sources:     [{name:                 'Genome',
+            coordSystem: {
+                speciesName: 'Human',
+                taxon: 9606,
+                auth: 'GRCh',
+                version: '37',
+                ucscName: 'hg19'
+            },
+
+     sources:     [{name:                 'Genome',
                    twoBitURI:            '//www.biodalliance.org/datasets/hg19.2bit',
                    tier_type:            'sequence'},
                   {name: "Coo",
                    bamURI: '/static/ENCFF000IYN.bam'},
                   {name: "External",
                    bamURI: 'http://www.biodalliance.org/datasets/bodymap-skeletal_muscle-chr22.bam'},
-                  {name: "Variants", 
+                  {name: "Variants",
                    bwgURI: 'static/GIAB-V3.3-chr22.web.bb',
                    style: [{type: 'default', style: {LABEL: false, GLYPH: 'PLIMSOLL'}}]
 }]
   });
-</script>
-<div id="svgHolder"></div>
+
+        function export_region() {
+            var chr = browser.chr;
+            var viewStart = browser.viewStart;
+            var viewEnd = browser.viewEnd;
+            var data = {'chr': chr, 'viewStart': viewStart, 'viewEnd': viewEnd};
+            $.ajax({
+                url: '/get_region',
+                data: JSON.stringify(data),
+                contentType: 'application/json;charset=UTF-8',
+                type: 'POST',
+                success: function (response) {
+                    console.log(response);
+                    console.log(data);
+                },
+                error: function (error) {
+                    console.log(error);
+                    console.log(data);
+                }
+            });
+        };
+
+    </script>
+    <div id="svgHolder"></div>
+    <div class="container">
+        <button onclick="export_region()">Export</button>
+    </div> <!-- /container -->
 {% endblock %}

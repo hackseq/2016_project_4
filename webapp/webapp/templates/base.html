@@ -22,10 +22,11 @@
 </head>
 <body>
 
-<!-- Fixed navbar -->
+<!-- navbar -->
 <div class="navbar navbar-default" role="navigation">
+
     <div class="container">
-        <img src="{{ url_for('static', filename='img/Baklava.png') }}" WIDTH=50 HEIGHT=50>
+        <img src="{{ url_for('static', filename='img/Baklava.png') }}" WIDTH=50 HEIGHT=50>  <!-- TODO: move to left of title -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -53,5 +54,6 @@
         </div>
     </div>
 </div>
+<script type=text/javascript src="{{ url_for('static', filename='js/jquery.js') }}"></script>
 </body>
 </html>

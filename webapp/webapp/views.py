@@ -1,8 +1,5 @@
-from flask import render_template, send_from_directory
-from flask_cors import CORS, cross_origin
+from flask import render_template, request
 from webapp import webapp
-
-cors = CORS(webapp, resources={r"/*": {"origins": "*"}})
 
 @webapp.route('/')
 @webapp.route('/index')
@@ -14,6 +11,14 @@ def index():
 def coverage():
     return render_template('coverage.html',
                            title='Summary of Coverage')
+
+@webapp.route('/get_region', methods=['POST'])
+def get_region():
+    chromosome = request.json['chr']        # this is a string
+    viewstart = request.json['viewStart']   # this is an int
+    viewend = request.json['viewEnd']       # this is an int
+    return str(viewend)
+
 
 @webapp.route('/about')
 def about():
