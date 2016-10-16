@@ -7,17 +7,13 @@ cors = CORS(webapp, resources={r"/*": {"origins": "*"}})
 @webapp.route('/')
 @webapp.route('/index')
 def index():
-    return "Hello World!"
+    return render_template('index.html',
+                           title='Home')
 
 @webapp.route('/coverage')
 def coverage():
     return render_template('coverage.html',
                            title='Summary of Coverage')
-
-@webapp.route('/<path:path>')
-@cross_origin(expose_headers='Range')
-def send_file(path):
-    return send_from_directory('static/bam', path)
 
 
 
