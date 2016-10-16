@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{ title }} - Genome Browser</title>
+</head>
+
+<script language="javascript" src="//www.biodalliance.org/release-0.13/dalliance-compiled.js"></script>
+<script language="javascript">
+  new Browser({
+    chr:          '22',
+    viewStart:    30700000,
+    viewEnd:      30900000,
+
+    coordSystem: {
+      speciesName: 'Human',
+      taxon: 9606,
+      auth: 'GRCh',
+      version: '37',
+      ucscName: 'hg19'
+    },
+
+    sources:     [{name:                 'Genome',
+                   twoBitURI:            '//www.biodalliance.org/datasets/hg19.2bit',
+                   tier_type:            'sequence'},
+                  {name: "MyBAMTrack",
+                   bamURI: '{{ url_for('static', filename='bam/bodymap-skeletal_muscle-chr22.bam') }}'}]
+    });
+</script>
+
+<div id="svgHolder"></div>
+</html>
