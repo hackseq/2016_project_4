@@ -28,3 +28,7 @@ def about():
 @webapp.route('/data')
 def data():
     return render_template('data.html', title='Data Provenance')
+
+@webapp.route('/benchmarks')
+def benchmarks():
+    return render_template('benchmarks.html', title='Benchmarks')
