@@ -17,6 +17,7 @@ def get_region():
     chromosome = request.json['chr']        # this is a string
     viewstart = request.json['viewStart']   # this is an int
     viewend = request.json['viewEnd']       # this is an int
+    sources = request.json['sources']
     return str(viewend)
 
 
