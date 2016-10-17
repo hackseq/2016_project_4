@@ -24,14 +24,16 @@
      sources:     [{name:                 'Genome',
                    twoBitURI:            '//www.biodalliance.org/datasets/hg19.2bit',
                    tier_type:            'sequence'},
-                  {name: "Coo",
-                   bamURI: '/static/ENCFF000IYN.bam'},
-                  {name: "External",
-                   bamURI: 'http://www.biodalliance.org/datasets/bodymap-skeletal_muscle-chr22.bam'},
-                  {name: "Variants",
-                   bwgURI: 'static/GIAB-V3.3-chr22.web.bb',
-                   style: [{type: 'default', style: {LABEL: false, GLYPH: 'PLIMSOLL'}}]
-}]
+	           {name: 'Genes',
+                       desc: 'Gene structures from GENCODE 19',
+                       bwgURI: '//www.biodalliance.org/datasets/gencode.bb',
+                       stylesheet_uri: '//www.biodalliance.org/stylesheets/gencode.xml',
+                       collapseSuperGroups: true,
+                       trixURI: '//www.biodalliance.org/datasets/geneIndex.ix'},
+                  {name: "Variants N-1",
+                   bwgURI: 'static/GIAB-V3.3-chr22.web.V5.bb',
+                   style: [{type: 'default', style: {LABEL: false}}]}
+]
   });
 
         function export_region() {
