@@ -30,6 +30,14 @@
                            stylesheet_uri: '//www.biodalliance.org/stylesheets/gencode.xml',
                            collapseSuperGroups: true,
                            trixURI: '//www.biodalliance.org/datasets/geneIndex.ix'},
+	           {name: 'Illumina WGS Coverage',
+                   bwgURI: '//baklavawgs.com/static/HiSeq-300x.chr22.bigWig'},
+                   {name: 'Coverage from One Source',
+                   bwgURI: '//baklavawgs.com/static/ENCFF000ATH_chr22_ChIP-seq_rg.depth.bw'},
+                   {name: 'Variants from One Source',
+                   bwgURI: '//baklavawgs.com/static/Test-One-Bam.bb'},
+                   {name: 'Variants from Five Sources',
+                   bwgURI: '//baklavawgs.com/static/Test-Five-Bam.bb'},
                    {% for track in tracks %}
                    {% if track.ext == 'bam' %}
                    {name: '{{ track.name }}',
