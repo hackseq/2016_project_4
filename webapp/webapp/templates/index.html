@@ -3,10 +3,12 @@
 
 {% block content %}
 <div class="jumbotron">
-  <h1>Pseudo-WGS variant calling for common cell types</h1>
-  <h2>Motivation</h2>
+  <h3>Pseudo-WGS variant calling for common cell types</h3>
+  <h4>Motivation</h4>
   <p>Recent progress in sequencing technologies have led to a massive production of epigenetic datasets for many cell lines, thanks mainly to big consortia like ENCODE. This resource has helped tremendously to understand the role of non-coding variants and to prioritize the search of putative causal SNPs through cell-type-specific functional regions such as active or repressed promoters, enhancers, insulators, repressed or open chromatin. On the other hand we still miss genotype information for almost all the cell types profiled limiting the power of allele specific alignments and further analysis that require the right reference genome.</p>
-  <h2>Goals</h2>
+  <h4>Goals</h4>
   <p>To fill this gap the goal of this project is to recover genotype information such as SNPs for common cell types aggregating ChIP-seq, RNA-seq, DHS and other sequencing data already produced and available from the ENCODE and the Roadmap Epigenomics consortia. The basic idea is that although single assays for each cell line don't have enough coverage in many regions of the genome, aggregating sequencing information for all the available assays for each cell type provides enough power to recover variants with high confidence. The long term vision will be to provide .VCF files for many cell types ready to use for the community, mining already available and public data.</p>
-  <p><a class="btn btn-primary btn-lg" href="/coverage" role="button">Check it out</a></p>
+  </br>
+  <p><center><a class="btn btn-primary btn-xlarge" href="/coverage" role="button">Check it out!</a></center></p>
+
 {% endblock %}

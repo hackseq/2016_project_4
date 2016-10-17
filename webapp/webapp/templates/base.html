@@ -26,15 +26,17 @@
 <div class="navbar navbar-default" role="navigation">
 
     <div class="container">
-        <img src="{{ url_for('static', filename='img/Baklava.png') }}" WIDTH=50 HEIGHT=50>  <!-- TODO: move to left of title -->
-        <div class="navbar-header">
+             <div class="navbar-header">
+             
+            <img style="float:left" src="{{ url_for('static', filename='img/Baklava.png') }}" WIDTH=100 HEIGHT=100></span>  <!-- TODO: move to left of title -->
+			<span><a style="font-size:2.5em; line-height: 1.5em;"class="navbar-brand" href="index">baklavaWGS</a><</span>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index">baklavaWGS</a>
+            
         </div>
         <div class="navbar-collapse collapse navbar-right">
             <ul class="nav navbar-nav">
