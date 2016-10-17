@@ -9,8 +9,11 @@ def index():
 
 @webapp.route('/coverage')
 def coverage():
+    f = open('webapp/static/displaytracks.txt')
+    tracks = get_tracks(f)
     return render_template('coverage.html',
-                           title='Summary of Coverage')
+                           title='Summary of Coverage',
+                           tracks=tracks)
 
 @webapp.route('/get_region', methods=['POST'])
 def get_region():
@@ -20,7 +23,6 @@ def get_region():
     sources = request.json['sources']
     return str(viewend)
 
-
 @webapp.route('/about')
 def about():
     return render_template('about.html', title='About the Team')
@@ -28,3 +30,19 @@ def about():
 @webapp.route('/data')
 def data():
     return render_template('data.html', title='Data Provenance')
+
+
+def get_tracks(f):
+    tracks = list()
+    line = f.readline()
+
+    while not line == '':
+        track = {}
+        records = line.split()
+        track['name'] = records[0]
+        track['filename'] = records[1]
+        track['ext'] = track['filename'].split('.')[-1]
+        tracks.append(track)
+        line = f.readline()
+
+    return tracks

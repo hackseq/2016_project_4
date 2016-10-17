@@ -1,0 +1,3 @@
+Track1 //www.biodalliance.org/datasets/gencode.bb
+Track2 //www.biodalliance.org/datasets/phastCons46way.bw
+Track3 //www.biodalliance.org/datasets/bodymap-skeletal_muscle-chr22.bam
