@@ -2,9 +2,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>Precision over 5 BAMs</h2>
+<h2>Precision for One or Three BAMs</h2>
+<img src="{{ url_for('static', filename='img/Precision.Comparison.Final.png') }}" class="img-responsive">
+<h2>Recall for One or Three BAMs</h2>
+<img src="{{ url_for('static', filename='img/Recall.Comparison.Final.png') }}" class="img-responsive">
+<h2>Precision over Five BAMs</h2>
 <img src="{{ url_for('static', filename='img/Precision.1.Final.png') }}" class="img-responsive">
-<h2>Recall over 5 BAMs</h2>
+<h2>Recall over Five BAMs</h2>
 <img src="{{ url_for('static', filename='img/Recall.1.Final.png') }}" class="img-responsive">
 
 

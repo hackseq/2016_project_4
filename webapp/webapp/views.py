@@ -9,8 +9,11 @@ def index():
 
 @webapp.route('/coverage')
 def coverage():
-    f = open('webapp/static/displaytracks.txt')
-    tracks = get_tracks(f)
+    try:
+        f = open('/hackathon/Hackathon_Project_4/TRACKS/displaytracks.txt')
+        tracks = get_tracks(f)
+    except:
+        tracks =  list()
     return render_template('coverage.html',
                            title='Summary of Coverage',
                            tracks=tracks)
