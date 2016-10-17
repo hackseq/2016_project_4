@@ -1,4 +1,4 @@
-# Pseudo-WGS variant calling for common cell types aggregating ChIP-seq, RNA-seq and DHS from ENCODE and Roadmap Epigenomics data
+# BaklavaWGS: Pseudo-WGS variant calling for common cell types aggregating ChIP-seq, RNA-seq and DHS from ENCODE and Roadmap Epigenomics data
 
 Motivation
 ----------
@@ -12,3 +12,10 @@ To fill this gap the goal of this project is to recover genotype information suc
 Suggested readings
 ------------------
 Mielczarek M, Szyda J. Review of alignment and SNP calling algorithms for next-generation sequencing data. J Appl Genet. 2016 Feb;57(1):71-9. doi: 10.1007/s13353-015-0292-7. Epub 2015 Jun 9. Review. PubMed PMID: 26055432. (http://www.ncbi.nlm.nih.gov/pubmed/26055432)
+
+
+Presentation
+------------
+https://docs.google.com/presentation/d/1qQoD2jh1j_aDItXW1XIZp--7AYavkcZrxaxF_mfJdEo/edit#slide=id.g18543249f8_0_89
+
+Website: www.baklavawgs.com
