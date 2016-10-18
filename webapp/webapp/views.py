@@ -10,7 +10,7 @@ def index():
 @webapp.route('/coverage')
 def coverage():
     try:
-        f = open('/hackathon/Hackathon_Project_4/TRACKS/displaytracks.txt')
+        f = open('/home/ubuntu/TRACKS/displaytracks.txt')
         tracks = get_tracks(f)
     except:
         tracks =  list()
