@@ -1,0 +1,119 @@
+ENCFF000CXF_chr22_RNA-seq_rg
+Re-assigning mapping quality scores..
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+Generating calibration table..
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  05:39:11,266 IndexDictionaryUtils - Track knownSites doesn't have a sequence dictionary built in, skipping dictionary validation 
+------------------------------------------------------------------------------------------
+Generating re-calibrated bam..
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+INFO  05:39:06,587 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  05:39:06,589 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.6-0-g89b7209, Compiled 2016/06/01 22:27:29 
+INFO  05:39:06,589 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  05:39:06,590 HelpFormatter - For support and documentation go to https://www.broadinstitute.org/gatk 
+INFO  05:39:06,590 HelpFormatter - [Mon Oct 17 05:39:06 UTC 2016] Executing on Linux 3.13.0-91-generic amd64 
+INFO  05:39:06,590 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_92-b15 JdkDeflater 
+INFO  05:39:06,593 HelpFormatter - Program Args: -T PrintReads -R /hackathon/Hackathon_Project_4/REFERENCE_GENOME/hg19_ENCODE.fa -I ENCFF000CXF_chr22_RNA-seq_rg.bam -o ENCFF000CXF_chr22_RNA-seq_rg_reassigned.bam -rf ReassignOneMappingQuality -RMQF 255 -RMQT 60 --defaultBaseQualities 60 -U ALLOW_N_CIGAR_READS 
+INFO  05:39:06,603 HelpFormatter -  
+INFO  05:39:06,603 HelpFormatter - Date/Time: 2016/10/17 05:39:06 
+INFO  05:39:06,603 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  05:39:06,603 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  05:39:06,647 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  05:39:06,700 GenomeAnalysisEngine - Downsampling Settings: No downsampling 
+INFO  05:39:06,705 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  05:39:06,722 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.02 
+INFO  05:39:06,782 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  05:39:06,786 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  05:39:06,786 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  05:39:06,786 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  05:39:06,786 ProgressMeter -        Location |     reads | elapsed |     reads | completed | runtime |   runtime 
+INFO  05:39:06,791 ReadShardBalancer$1 - Loading BAM index data 
+INFO  05:39:06,792 ReadShardBalancer$1 - Done loading BAM index data 
+DEBUG	2016-10-17 05:39:07	BlockCompressedOutputStream	Using deflater: Deflater
+INFO  05:39:09,698 Walker - [REDUCE RESULT] Traversal result is: org.broadinstitute.gatk.engine.io.stubs.SAMFileWriterStub@13714753 
+INFO  05:39:09,709 ProgressMeter -            done    180424.0     2.0 s      16.0 s       94.9%     2.0 s       0.0 s 
+INFO  05:39:09,709 ProgressMeter - Total runtime 2.92 secs, 0.05 min, 0.00 hours 
+INFO  05:39:09,713 MicroScheduler - 0 reads were filtered out during the traversal out of approximately 180424 total reads (0.00%) 
+INFO  05:39:09,713 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  05:39:09,713 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  05:39:09,713 MicroScheduler -   -> 0 reads (0.00% of total) failing ReassignOneMappingQualityFilter 
+INFO  05:39:11,001 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  05:39:11,002 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.6-0-g89b7209, Compiled 2016/06/01 22:27:29 
+INFO  05:39:11,003 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  05:39:11,003 HelpFormatter - For support and documentation go to https://www.broadinstitute.org/gatk 
+INFO  05:39:11,003 HelpFormatter - [Mon Oct 17 05:39:10 UTC 2016] Executing on Linux 3.13.0-91-generic amd64 
+INFO  05:39:11,003 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_92-b15 JdkDeflater 
+INFO  05:39:11,006 HelpFormatter - Program Args: -T BaseRecalibrator -R /hackathon/Hackathon_Project_4/REFERENCE_GENOME/hg19_ENCODE.fa -I ENCFF000CXF_chr22_RNA-seq_rg_reassigned.bam -knownSites /hackathon/Hackathon_Project_4/DBSNP/dbsnp_138_ENCODE3.hg19.vcf.gz -o ENCFF000CXF_chr22_RNA-seq_rg_reassigned_recal_data.table -U ALLOW_N_CIGAR_READS 
+INFO  05:39:11,012 HelpFormatter -  
+INFO  05:39:11,012 HelpFormatter - Date/Time: 2016/10/17 05:39:11 
+INFO  05:39:11,012 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  05:39:11,012 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  05:39:11,025 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  05:39:11,103 GenomeAnalysisEngine - Downsampling Settings: No downsampling 
+INFO  05:39:11,109 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  05:39:11,125 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.01 
+WARN  05:39:11,266 IndexDictionaryUtils - Track knownSites doesn't have a sequence dictionary built in, skipping dictionary validation 
+INFO  05:39:11,313 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  05:39:11,316 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  05:39:11,316 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  05:39:11,317 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  05:39:11,317 ProgressMeter -        Location |     reads | elapsed |     reads | completed | runtime |   runtime 
+INFO  05:39:11,339 BaseRecalibrator - The covariates being used here:  
+INFO  05:39:11,339 BaseRecalibrator - 	ReadGroupCovariate 
+INFO  05:39:11,340 BaseRecalibrator - 	QualityScoreCovariate 
+INFO  05:39:11,340 BaseRecalibrator - 	ContextCovariate 
+INFO  05:39:11,340 ContextCovariate - 		Context sizes: base substitution model 2, indel substitution model 3 
+INFO  05:39:11,340 BaseRecalibrator - 	CycleCovariate 
+INFO  05:39:11,341 ReadShardBalancer$1 - Loading BAM index data 
+INFO  05:39:11,342 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  05:39:51,644 ProgressMeter -  chr22:38352834         0.0    40.0 s      66.7 w       94.5%    42.0 s       2.0 s 
+INFO  05:40:00,859 BaseRecalibrator - Calculating quantized quality scores... 
+INFO  05:40:00,870 BaseRecalibrator - Writing recalibration report... 
+INFO  05:40:00,892 BaseRecalibrator - ...done! 
+INFO  05:40:00,893 BaseRecalibrator - BaseRecalibrator was able to recalibrate 79035 reads 
+INFO  05:40:00,894 ProgressMeter -            done    157780.0    49.0 s       5.2 m       94.9%    51.0 s       2.0 s 
+INFO  05:40:00,894 ProgressMeter - Total runtime 49.58 secs, 0.83 min, 0.01 hours 
+INFO  05:40:00,894 MicroScheduler - 22644 reads were filtered out during the traversal out of approximately 180424 total reads (12.55%) 
+INFO  05:40:00,894 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  05:40:00,895 MicroScheduler -   -> 0 reads (0.00% of total) failing DuplicateReadFilter 
+INFO  05:40:00,895 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  05:40:00,895 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  05:40:00,895 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  05:40:00,895 MicroScheduler -   -> 22644 reads (12.55% of total) failing MappingQualityZeroFilter 
+INFO  05:40:00,895 MicroScheduler -   -> 0 reads (0.00% of total) failing NotPrimaryAlignmentFilter 
+INFO  05:40:00,896 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+INFO  05:40:02,519 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  05:40:02,521 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.6-0-g89b7209, Compiled 2016/06/01 22:27:29 
+INFO  05:40:02,521 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  05:40:02,521 HelpFormatter - For support and documentation go to https://www.broadinstitute.org/gatk 
+INFO  05:40:02,521 HelpFormatter - [Mon Oct 17 05:40:02 UTC 2016] Executing on Linux 3.13.0-91-generic amd64 
+INFO  05:40:02,521 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_92-b15 JdkDeflater 
+INFO  05:40:02,524 HelpFormatter - Program Args: -T PrintReads -R /hackathon/Hackathon_Project_4/REFERENCE_GENOME/hg19_ENCODE.fa -I ENCFF000CXF_chr22_RNA-seq_rg_reassigned.bam -BQSR ENCFF000CXF_chr22_RNA-seq_rg_reassigned_recal_data.table -o ENCFF000CXF_chr22_RNA-seq_rg_recalibrated.bam -U ALLOW_N_CIGAR_READS 
+INFO  05:40:02,530 HelpFormatter -  
+INFO  05:40:02,531 HelpFormatter - Date/Time: 2016/10/17 05:40:02 
+INFO  05:40:02,531 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  05:40:02,531 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  05:40:02,573 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  05:40:02,650 ContextCovariate - 		Context sizes: base substitution model 2, indel substitution model 3 
+INFO  05:40:02,653 GenomeAnalysisEngine - Downsampling Settings: No downsampling 
+INFO  05:40:02,658 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  05:40:02,674 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.02 
+INFO  05:40:02,734 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  05:40:02,737 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  05:40:02,738 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  05:40:02,738 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  05:40:02,738 ProgressMeter -        Location |     reads | elapsed |     reads | completed | runtime |   runtime 
+INFO  05:40:02,743 ReadShardBalancer$1 - Loading BAM index data 
+INFO  05:40:02,744 ReadShardBalancer$1 - Done loading BAM index data 
+DEBUG	2016-10-17 05:40:03	BlockCompressedOutputStream	Using deflater: Deflater
+INFO  05:40:06,601 Walker - [REDUCE RESULT] Traversal result is: org.broadinstitute.gatk.engine.io.stubs.SAMFileWriterStub@1cab19e2 
+INFO  05:40:06,612 ProgressMeter -            done    180424.0     3.0 s      21.0 s       94.9%     3.0 s       0.0 s 
+INFO  05:40:06,612 ProgressMeter - Total runtime 3.87 secs, 0.06 min, 0.00 hours 
+INFO  05:40:06,616 MicroScheduler - 0 reads were filtered out during the traversal out of approximately 180424 total reads (0.00%) 
+INFO  05:40:06,616 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  05:40:06,616 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 

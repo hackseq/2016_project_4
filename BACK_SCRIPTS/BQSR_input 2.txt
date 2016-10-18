@@ -1,0 +1,1 @@
+ENCFF000CXF_chr22_RNA-seq_rg.bam
